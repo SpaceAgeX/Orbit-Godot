@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf607egal3qp8"]
+
+[ext_resource type="Texture2D" uid="uid://ci0t0mno8005r" path="res://Assets/Moon.jpg" id="1_3tcni"]
+[ext_resource type="PackedScene" uid="uid://duuyt3p4euwmb" path="res://body.tscn" id="1_rjvio"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gw7d"]
+albedo_texture = ExtResource("1_3tcni")
+
+[sub_resource type="SphereMesh" id="SphereMesh_2g4ib"]
+material = SubResource("StandardMaterial3D_7gw7d")
+
+[node name="Moon" instance=ExtResource("1_rjvio")]
+radius = 1740000.0
+distance = 380000000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("SphereMesh_2g4ib")
