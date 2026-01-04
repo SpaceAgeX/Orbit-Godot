@@ -1,23 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://8pqbudqpl525"]
+[gd_scene load_steps=5 format=3 uid="uid://8pqbudqpl525"]
 
 [ext_resource type="Script" uid="uid://by7nojkny8dx1" path="res://body.gd" id="1_body"]
+[ext_resource type="Texture2D" uid="uid://bn5x4sf6uobba" path="res://Assets/Sun.jpg" id="2_gtd5v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sun"]
 shading_mode = 0
-albedo_color = Color(1, 1, 1, 1)
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 4.0
+albedo_texture = ExtResource("2_gtd5v")
 
 [sub_resource type="SphereMesh" id="SphereMesh_sun"]
-radius = 1.0
-height = 2.0
 material = SubResource("StandardMaterial3D_sun")
 
 [node name="Sun" type="Node3D"]
 script = ExtResource("1_body")
-radius = 6.9634e8
-distance = 1.496e11
+radius = 696340000.0
+distance = 149600000000.0
 angle = 10.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
