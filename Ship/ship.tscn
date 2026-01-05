@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6ca53dyj623y"]
+
+[ext_resource type="Script" uid="uid://12puy6j5opsm" path="res://Ship/ship.gd" id="1_l3rv8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p84g"]
+emission_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_4cq66"]
+material = SubResource("StandardMaterial3D_1p84g")
+
+[node name="Ship" type="Node3D"]
+script = ExtResource("1_l3rv8")
+solarPosition = Vector3(149600000, 0, -350000)
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_4cq66")
+skeleton = NodePath("../CameraRig/Camera3D")

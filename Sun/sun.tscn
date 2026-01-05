@@ -1,20 +1,19 @@
 [gd_scene load_steps=5 format=3 uid="uid://8pqbudqpl525"]
 
-[ext_resource type="Script" uid="uid://by7nojkny8dx1" path="res://body.gd" id="1_body"]
+[ext_resource type="Script" uid="uid://f5hqn5w2t6vf" path="res://Sun/sun.gd" id="1_gtd5v"]
 [ext_resource type="Texture2D" uid="uid://bn5x4sf6uobba" path="res://Assets/Sun.jpg" id="2_gtd5v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sun"]
 shading_mode = 0
 albedo_texture = ExtResource("2_gtd5v")
 
-[sub_resource type="SphereMesh" id="SphereMesh_sun"]
+[sub_resource type="SphereMesh" id="SphereMesh_iveel"]
 material = SubResource("StandardMaterial3D_sun")
 
 [node name="Sun" type="Node3D"]
-script = ExtResource("1_body")
-radius = 696340000.0
-distance = 149600000000.0
-angle = 10.0
+script = ExtResource("1_gtd5v")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_sun")
+mesh = SubResource("SphereMesh_iveel")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

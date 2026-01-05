@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://p1biqhnv20gp"]
+
+[ext_resource type="Script" uid="uid://3vjt4imwtorw" path="res://Sky/sky.gd" id="1_dptxg"]
+[ext_resource type="PackedScene" uid="uid://bf607egal3qp8" path="res://Moon/moon.tscn" id="2_py8sg"]
+[ext_resource type="PackedScene" uid="uid://8pqbudqpl525" path="res://Sun/sun.tscn" id="3_py8sg"]
+[ext_resource type="Script" uid="uid://by7nojkny8dx1" path="res://body.gd" id="3_xeklh"]
+[ext_resource type="PackedScene" uid="uid://bb5xq5jsjsg0c" path="res://Earth/earth.tscn" id="4_4krsh"]
+
+[node name="Sky" type="Node3D"]
+script = ExtResource("1_dptxg")
+visualization_distance_m = null
+angular_exaggeration = null
+ship_path = null
+live_update = null
+
+[node name="Moon" parent="." instance=ExtResource("2_py8sg")]
+script = ExtResource("3_xeklh")
+
+[node name="Sun" parent="." instance=ExtResource("3_py8sg")]
+
+[node name="Earth" parent="." instance=ExtResource("4_4krsh")]
