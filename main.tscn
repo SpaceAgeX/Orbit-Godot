@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm2bssnwrva7f"]
+[gd_scene load_steps=8 format=3 uid="uid://dm2bssnwrva7f"]
 
 [ext_resource type="PackedScene" uid="uid://p1biqhnv20gp" path="res://Sky/sky.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://cgaqixlygrl2c" path="res://camera_rig.gd" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b6ca53dyj623y" path="res://Ship/ship.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bqebp15fnpwvv" path="res://Assets/Stars.jpg" id="4_1bvp3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lquwl"]
+panorama = ExtResource("4_1bvp3")
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("PanoramaSkyMaterial_lquwl")
 
 [sub_resource type="Environment" id="Environment_h2yge"]
-background_mode = 1
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_7mycd")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.2

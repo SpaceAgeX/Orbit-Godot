@@ -10,7 +10,7 @@ material = SubResource("StandardMaterial3D_1p84g")
 
 [node name="Ship" type="Node3D"]
 script = ExtResource("1_l3rv8")
-solarPosition = Vector3(149600000, 0, -350000)
+solarPosition = Vector3(149600000, 0, -7000)
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_4cq66")
